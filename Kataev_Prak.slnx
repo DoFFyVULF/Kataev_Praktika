@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="KataevLIB.Tests/KataevLIB.Tests.csproj" Id="a2fdfb7b-7869-4bd8-bc48-a5381893d76b" />
+  <Project Path="KataevLIB/KataevLIB.csproj" Id="1349e69f-7d6b-428d-bf2a-dc55296247b5" />
+  <Project Path="KataevWPF/KataevWPF.csproj" Id="b1e3e0b2-5356-445a-bdd3-646353b534d3" />
+</Solution>

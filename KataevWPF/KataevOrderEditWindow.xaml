@@ -1,0 +1,52 @@
+﻿<Window x:Class="KataevWPF.KataevOrderEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Управление заказом — Катаев" 
+        Height="350" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Background="#F5F5F5">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Text="Данные заказа" 
+                   FontSize="20" FontWeight="Bold" Margin="0,0,0,20" Foreground="#333"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Продукция:" VerticalAlignment="Center" Margin="0,5"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" x:Name="CbProducts" Margin="5" Height="28" 
+                  DisplayMemberPath="Name" SelectedValuePath="Id"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Выберите товар из списка" FontSize="10" Foreground="#999" Margin="5,0,0,-18" IsHitTestVisible="False"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Количество (ед.):" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TxtQuantity" Margin="5" Height="28" 
+                 PreviewTextInput="TxtQuantity_PreviewTextInput" TextAlignment="Right" FontSize="14"/>
+        
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Дата продажи:" VerticalAlignment="Center" Margin="0,5"/>
+        <DatePicker Grid.Row="3" Grid.Column="1" x:Name="DpDate" Margin="5" Height="28"/>
+
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Сохранить" Width="110" Height="35" 
+                    Background="#4CAF50" Foreground="White" BorderThickness="0" Cursor="Hand" FontWeight="SemiBold"
+                    Click="BtnSave_Click" Margin="0,0,10,0"/>
+            <Button Content="Отмена" Width="110" Height="35" 
+                    Background="#F44336" Foreground="White" BorderThickness="0" Cursor="Hand" FontWeight="SemiBold"
+                    Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
