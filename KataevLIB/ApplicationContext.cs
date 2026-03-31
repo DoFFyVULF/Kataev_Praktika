@@ -10,7 +10,7 @@ namespace KataevLIB
 
         public ApplicationContext()
         {
-            Database.EnsureCreated();
+          
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Управление заказом — Катаев" 
-        Height="350" Width="500"
+        Height="400" Width="500"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
         Background="#F5F5F5">
@@ -31,7 +31,7 @@
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Продукция:" VerticalAlignment="Center" Margin="0,5"/>
         <ComboBox Grid.Row="1" Grid.Column="1" x:Name="CbProducts" Margin="5" Height="28" 
                   DisplayMemberPath="Name" SelectedValuePath="Id"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Выберите товар из списка" FontSize="10" Foreground="#999" Margin="5,0,0,-18" IsHitTestVisible="False"/>
+        <TextBlock Grid.Row="1" Grid.Column="1"  FontSize="10" Foreground="#999" Margin="10,12,0,-18" IsHitTestVisible="False"/>
 
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Количество (ед.):" VerticalAlignment="Center" Margin="0,5"/>
         <TextBox Grid.Row="2" Grid.Column="1" x:Name="TxtQuantity" Margin="5" Height="28" 
