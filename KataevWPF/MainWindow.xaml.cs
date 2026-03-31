@@ -42,8 +42,11 @@ namespace KataevWPF
 
                 DetailsPanel.Visibility = Visibility.Collapsed;
                 PlaceholderText.Visibility = Visibility.Visible;
-                BtnEditPartner.IsEnabled = false;
-                BtnDeletePartner.IsEnabled = false;
+
+                // 🔹 Исправлено: старые имена кнопок → новые имена MenuItem
+                EditPartnerMenuItem.IsEnabled = false;
+                DeletePartnerMenuItem.IsEnabled = false;
+
                 KataevPartnersList.SelectedItem = null;
             }
             catch (Exception ex)
@@ -58,8 +61,10 @@ namespace KataevWPF
 
             if (selectedPartner != null)
             {
-                BtnEditPartner.IsEnabled = true;
-                BtnDeletePartner.IsEnabled = true;
+                // 🔹 Исправлено: старые имена кнопок → новые имена MenuItem
+                EditPartnerMenuItem.IsEnabled = true;
+                DeletePartnerMenuItem.IsEnabled = true;
+
                 PlaceholderText.Visibility = Visibility.Collapsed;
                 DetailsPanel.Visibility = Visibility.Visible;
 
@@ -70,8 +75,10 @@ namespace KataevWPF
             }
             else
             {
-                BtnEditPartner.IsEnabled = false;
-                BtnDeletePartner.IsEnabled = false;
+                // 🔹 Исправлено: старые имена кнопок → новые имена MenuItem
+                EditPartnerMenuItem.IsEnabled = false;
+                DeletePartnerMenuItem.IsEnabled = false;
+
                 DetailsPanel.Visibility = Visibility.Collapsed;
                 PlaceholderText.Visibility = Visibility.Visible;
             }
