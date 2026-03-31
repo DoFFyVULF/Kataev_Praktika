@@ -43,7 +43,6 @@ namespace KataevWPF
                 DetailsPanel.Visibility = Visibility.Collapsed;
                 PlaceholderText.Visibility = Visibility.Visible;
 
-                // 🔹 Исправлено: старые имена кнопок → новые имена MenuItem
                 EditPartnerMenuItem.IsEnabled = false;
                 DeletePartnerMenuItem.IsEnabled = false;
 
@@ -61,7 +60,6 @@ namespace KataevWPF
 
             if (selectedPartner != null)
             {
-                // 🔹 Исправлено: старые имена кнопок → новые имена MenuItem
                 EditPartnerMenuItem.IsEnabled = true;
                 DeletePartnerMenuItem.IsEnabled = true;
 
@@ -75,7 +73,6 @@ namespace KataevWPF
             }
             else
             {
-                // 🔹 Исправлено: старые имена кнопок → новые имена MenuItem
                 EditPartnerMenuItem.IsEnabled = false;
                 DeletePartnerMenuItem.IsEnabled = false;
 
